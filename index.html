@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A product list with cart functionality. Browse and purchase desserts with ease."
+    />
+    <meta name="keywords" content="desserts, cart, product list, e-commerce" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./js/index.js"></script>
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+  <body>
+    <!--*=============================={Main}====================-->
+    <main id="main" class="main">
+      <!--*=============================={Article}====================-->
+      <article class="product-list">
+        <!-- Heading -->
+        <header id="header" class="header" role="banner" data-header>
+          <h1>Desserts</h1>
+        </header>
+        <!-- Cards -->
+        <section class="Product-grid" data-product-grid></section>
+      </article>
+      <!-- * --------------------[Product-Checkout] -->
+      <article class="product-checkout">
+        <div class="product-checkout-container">
+          <header class="Product-checkout__heading">
+            <h2 class="heading-fourth cart--heading">
+              Your Cart
+              <span data-cart-quantity>(0)</span>
+            </h2>
+          </header>
+          <section class="product-card__cart hide" data-cart>
+            <!--* {Cart} -->
+            <article class="product-cart" data-cart>
+              <section
+                class="product-card__items"
+                data-cart-item-parent
+              ></section>
+            </article>
+
+            <section class="product-card__confirm-order">
+              <!-- !TOTAL ITEMS -->
+              <div class="card__item__total">
+                <h2 class="heading-secondary heading--order">Order Total</h2>
+                <h2 class="heading-third heading--total" data-grand-total>
+                  $0
+                </h2>
+              </div>
+              <!--! Delivery Specifics -->
+              <div class="card__item__delivery">
+                <figure>
+                  <div class="svg">
+                    <svg aria-label="Icon carbon neutral">
+                      <use
+                        xlink:href="./assets/images/icon.svg#icon-carbon-neutral"
+                      ></use>
+                    </svg>
+                  </div>
+                  <figcaption>
+                    <h3 class="heading-secondary heading--carbon">
+                      This is a
+                      <span>carbon-neutral</span>
+                      delivery
+                    </h3>
+                  </figcaption>
+                </figure>
+              </div>
+              <!--! Confirm button -->
+              <div class="card__item__confirm">
+                <button data-confirm-order aria-label="Confirm order">
+                  Confirm Order
+                </button>
+              </div>
+            </section>
+          </section>
+          <!--*--------------------------------------------[Cart is empty] -->
+
+          <div class="product-card__cart--empty" data-cart-empty>
+            <div class="svg big--svg">
+              <svg aria-label="Icon empty cart" role="img">
+                <use
+                  xlink:href="./assets/images/icon.svg#icon-empty-cart"
+                ></use>
+              </svg>
+            </div>
+
+            <h2 class="heading-secondary heading--empty">
+              Your added items will appear here
+            </h2>
+          </div>
+          <!--*--------------------------------------------[Order is confirmed] -->
+          <article class="product-card-confirm-order hide" data-cart-confirm>
+            <!--!Overlay -->
+            <section class="confirm-order__overlay">
+              <!--!Confirmed  -->
+              <article class="confirm-order">
+                <!--!==============================================={Content }-->
+                <div class="confirm-order__container">
+                  <div class="confirmed">
+                    <!-- !{SVG} -->
+                    <div class="svg mid--svg">
+                      <svg aria-label="Icon order confirmed" role="img">
+                        <use
+                          xlink:href="./assets/images/icon.svg#icon-order-confirmed"
+                        ></use>
+                      </svg>
+                    </div>
+                    <!-- !heading -->
+                    <div class="confirmed__heading">
+                      <h2 class="heading-third heading--confirmed">
+                        Order
+                        <span>Confirmed</span>
+                      </h2>
+                      <h3 class="heading-secondary heading--thanks">
+                        We hope you enjoy your food!
+                      </h3>
+                    </div>
+                  </div>
+                  <!-- !================================================================={!Checkout}-->
+                  <div class="confirmed__item__cost">
+                    <div
+                      class="confirmed__item__container"
+                      data-confirm-container
+                    ></div>
+                    <!-- !=================================================================={Order total} -->
+                    <div class="card__item__total confirm--order">
+                      <h2 class="heading-secondary heading--order">
+                        Order Total
+                      </h2>
+                      <h2 class="heading-third heading--total" data-grand-total>
+                        $0
+                      </h2>
+                    </div>
+                  </div>
+                  <!--!====================================================================={StartNew}  -->
+                  <!-- !Start New Orders -->
+                  <div class="card__item__confirm new--order">
+                    <button data-start-order aria-label="start new order">
+                      Start New Order
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </article>
+        </div>
+        <!-- !============================================================================={Quick Navigation} -->
+
+        <section class="popup" data-quick-navigation>
+          <a href="#header" class="quick-navigation">
+            <img
+              class="img"
+              src="./assets/images/icon-arrow.svg"
+              alt="An arrow icon used for navigating to the header"
+            />
+          </a>
+        </section>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Peter Godspower</a>.
+    </footer>
+  </body>
+</html>
